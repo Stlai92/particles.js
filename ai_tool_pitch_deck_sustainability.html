@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool for Sustainability - Pitch Deck</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7f4;
+        }
+        .slide {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #234d20;
+            background: linear-gradient(180deg, #d4e9e2, #f0f7f4);
+            padding: 20px;
+        }
+        .slide h1, .slide h2, .slide h3 {
+            margin: 10px 0;
+            font-family: 'Georgia', serif;
+        }
+        .slide h1 {
+            font-size: 3rem;
+        }
+        .slide h2 {
+            font-size: 2.5rem;
+        }
+        .slide h3 {
+            font-size: 2rem;
+        }
+        .slide p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+        ul, ol {
+            text-align: left;
+            max-width: 80%;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .navigation {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .navigation button {
+            background-color: #234d20;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .navigation button:hover {
+            background-color: #2d6a4f;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9rem;
+            color: #234d20;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide" id="slide1">
+        <img class="logo" src="https://via.placeholder.com/100x50?text=Logo" alt="Company Logo">
+        <h1>AI Tool for Sustainability</h1>
+        <h2>Technical Architecture Pitch Deck</h2>
+        <p>Driving transparency, accountability, and growth through AI-powered measurement and reporting.</p>
+    </div>
+
+    <div class="slide" id="slide2" style="display: none;">
+        <h2>Objective</h2>
+        <p>Create an AI tool to measure and analyze carbon footprints, greenhouse gas emissions, and other sustainability metrics.</p>
+        <h3>Key Features</h3>
+        <ul>
+            <li>Real-time data collection and processing</li>
+            <li>Industry-specific metric assessments</li>
+            <li>Predictive analytics for sustainability improvements</li>
+            <li>Integration with global frameworks (GHG Protocol, CDP, TCFD)</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide3" style="display: none;">
+        <h2>Core Capabilities</h2>
+        <p>Our tool includes the following capabilities:</p>
+        <ul>
+            <li><strong>Data Collection:</strong> Automate collection from IoT sensors, energy meters, and supply chain systems.</li>
+            <li><strong>Carbon Footprint Calculation:</strong> Implement algorithms to calculate Scope 1, Scope 2, and Scope 3 emissions.</li>
+            <li><strong>Visualization:</strong> Generate dashboards to display emissions data, trends, and progress toward goals.</li>
+            <li><strong>Predictive Analytics:</strong> Use machine learning models to forecast future emissions and provide actionable recommendations.</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide4" style="display: none;">
+        <h2>Technical Stack</h2>
+        <ul>
+            <li><strong>Data Pipeline:</strong> Tools like Apache Kafka, AWS IoT, or Google Cloud Pub/Sub.</li>
+            <li><strong>Data Storage:</strong> AWS S3, Azure Blob Storage, or Google BigQuery for scalable data storage.</li>
+            <li><strong>AI & ML Models:</strong> TensorFlow, PyTorch, or Scikit-learn for analytics and forecasting.</li>
+            <li><strong>Visualization:</strong> Tableau, Power BI, or D3.js for interactive dashboards.</li>
+            <li><strong>APIs:</strong> RESTful APIs for integration with third-party systems and frameworks.</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide5" style="display: none;">
+        <h2>Development Phases</h2>
+        <p>The development of the AI tool will follow these phases:</p>
+        <ol>
+            <li><strong>Research and Design (1-2 Months):</strong> Gather requirements, identify metrics, and design architecture.</li>
+            <li><strong>Data Collection and Preparation (2-3 Months):</strong> Integrate data sources and preprocess data.</li>
+            <li><strong>Model Development (3-4 Months):</strong> Train and validate machine learning models.</li>
+            <li><strong>Tool Development and Testing (3 Months):</strong> Build user interfaces and test with pilot users.</li>
+            <li><strong>Deployment and Maintenance (Ongoing):</strong> Deploy on cloud infrastructure and improve models continuously.</li>
+        </ol>
+    </div>
+
+    <div class="slide" id="slide6" style="display: none;">
+        <h2>Future Enhancements</h2>
+        <ul>
+            <li><strong>Blockchain Integration:</strong> For immutability and transparency in carbon credit tracking.</li>
+            <li><strong>Gamification:</strong> To incentivize sustainable behaviors among employees and stakeholders.</li>
+            <li><strong>Multi-lingual Support:</strong> To cater to global users and expand accessibility.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <div class="footer">Powered by Sustainability and AI</div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 6;
+
+        function showSlide(slideNumber) {
+            for (let i = 1; i <= totalSlides; i++) {
+                const slide = document.getElementById(`slide${i}`);
+                slide.style.display = i === slideNumber ? 'flex' : 'none';
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
